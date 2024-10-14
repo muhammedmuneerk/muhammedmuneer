@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMK - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
+
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Muhammed Muneer K</h1>
+            <p>Full Stack Developer | Web Enthusiast</p>
+            <div class="social-media">
+                <a href="https://github.com/muhammedmuneerk" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/muhammedmuneer-k/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="https://x.com/Muhammed200517" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i data-lucide="twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/muneer.k.161/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i data-lucide="facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/muneer_______k" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i data-lucide="instagram"></i>
+                </a>
+                <a href="https://wa.me/7356928611" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i> <!-- Font Awesome WhatsApp icon -->
+                </a>
+                <a href="tel:+7356928611" target="_blank" rel="noopener noreferrer" aria-label="Phone">
+                    <i data-lucide="phone"></i> <!-- Use the phone icon -->
+                </a>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a passionate full-stack developer with expertise in various web technologies. I love creating immersive digital experiences and solving complex problems through code.</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <!-- Skills will be dynamically added here by JavaScript -->
+            </div>
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <!-- Projects will be dynamically added here by JavaScript -->
+            </div>
+            <div id="project-details" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3 id="modal-title"></h3>
+                    <div class="modal-body">
+                        <img id="modal-image" src="" alt="Project Image">
+                        <p id="modal-description"></p>
+                        <div class="modal-buttons">
+                            <a id="live-site-btn" href="#" target="_blank" class="btn">View Live Site</a>
+                            <button id="view-site-btn" class="btn">View Site in Modal</button>
+                        </div>
+                    </div>
+                    <div id="site-preview" class="site-preview">
+                        <button id="close-preview" class="btn">Close Preview</button>
+                        <iframe id="site-iframe" src="" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" id="submit-btn">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-icon">&#10148;</span>
+                </button>
+            </form>
+            <div id="form-status" class="hidden"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Muhammed Muneer K. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
