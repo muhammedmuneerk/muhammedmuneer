@@ -561,7 +561,7 @@ footer {
     font-size: 1; /* Ensure the font-size is consistent */
     display: inline-block;
     line-height: 1;
-    color: var(--accent-color); /* Optional: Set a default color */
+  
 }
 
 /* Target Lucide icons by the element they use (typically <svg> or their default class) */
@@ -571,7 +571,7 @@ svg.lucide, [class^="lucide-"], [class*=" lucide-"] {
     font-size: 1; /* If needed for font-like behavior */
     display: inline-block;
     line-height: 1;
-    color: var(--accent-color); /* Optional: Same color */
+   
 }
 
 /* Optional: Apply for consistency in alignment */
