@@ -135,7 +135,7 @@ const projects = [
     },
     {
         name: 'Shazzz',
-        description: 'A static personal portfolio website showcasing my skills and projects.',
+        description: 'A static personal portfolio website showcasing Shazzz's experiences and establishments.',
         image: '/placeholder.svg?height=300&width=500',
         technologies: ['HTML', 'CSS', 'JavaScript'],
         github: 'https://github.com/yourusername/shazzz',
