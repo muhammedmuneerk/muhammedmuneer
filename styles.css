@@ -140,6 +140,26 @@ p {
     margin-bottom: 1rem;
     color: var(--accent-color);
 }
+.custom-skill-icon {
+    width: 50px; /* Size matches the other icons */
+    height: 50px;
+    object-fit: contain; /* Ensures proper aspect ratio */
+    width: 1;   /* Set a common width */
+    height: 1;  /* Set a common height */
+    font-size: 1; /* Ensure the font-size is consistent */
+    display: inline-block;
+    line-height: 1;
+    filter: brightness(0) saturate(100%) invert(1) sepia(0) hue-rotate(180deg);
+    /* color: var(--accent-color); */
+    /* color: #00ffff;  */
+    /* fill: #00ffff; /* Change the color here */
+    /* filter: brightness(0) saturate(100%) invert(1) sepia(0) hue-rotate(180deg); */
+    object-fit: contain; /* Ensures proper aspect ratio */
+    /* filter: brightness(0) saturate(1000%) hue-rotate(180deg); */
+    /* mix-blend-mode: multiply; /* Blend the image with the background color */
+    /* background-color: #00ffff; /* Set the desired cyan color */
+}
+
 
 .skill-name {
     font-size: 1.2rem;

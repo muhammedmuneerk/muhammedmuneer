@@ -88,6 +88,7 @@ const skills = [
     { name: 'Vercel', level: 'Expert', experience: 9, icon: 'triangle', iconLibrary: 'lucide' },
     { name: 'VS Code', level: 'Expert', experience: 10, icon: 'code', iconLibrary: 'lucide' },
     { name: 'Eclipse', level: 'Intermediate', experience: 6, icon: 'moon', iconLibrary: 'lucide' },
+    { name: 'Render', level: 'Advanced', experience: 7, icon: 'images/android-chrome-512x512.png', iconLibrary: 'custom' }, // Custom image for Render
 ];
 
 // Populate skills section
@@ -98,22 +99,28 @@ skills.forEach(skill => {
     skillCard.innerHTML = `
         <div class="skill-icon">
             ${skill.iconLibrary === 'lucide'
-                ? `<div data-lucide="${skill.icon}"></div>`
-                : `<i class="fab fa-${skill.icon}"></i>` // Assuming Font Awesome for AWS uses "fab" and is a brand icon
+                ? `<div data-lucide="${skill.icon}"></div>`  // Lucide icons
+                : skill.iconLibrary === 'custom' 
+                    ? `<img src="${skill.icon}" alt="${skill.name} icon" class="custom-skill-icon"/>` // Custom image
+                    : `<i class="fab fa-${skill.icon}"></i>` // Font Awesome icons
             }
         </div>
         <div class="skill-name">${skill.name}</div>
-        <div class="skill-level">Level: ${skill.level}</div>
-        <div class="skill-experience">Experience: ${skill.experience}/10</div>
-        <div class="experience-bar">
-            <div class="experience-fill" style="width: ${skill.experience * 10}%;"></div>
-        </div>
+        
     `;
+    //these goes after skill.name but inside of " `; ". ---->>>>>>
+    // <div class="skill-level">Level: ${skill.level}</div>
+    //     <div class="skill-experience">Experience: ${skill.experience}/10</div>
+    //     <div class="experience-bar">
+    //         <div class="experience-fill" style="width: ${skill.experience * 10}%;"></div>
+    //     </div>
     skillsGrid.appendChild(skillCard);
 });
 
 // Initialize Lucide icons
 lucide.createIcons();
+
+
 
 // Projects data
 const projects = [
@@ -135,7 +142,7 @@ const projects = [
     },
     {
         name: 'Shazzz',
-        description: 'A static personal portfolio website showcasing Shazzz's experiences and establishments.',
+        description: 'A static personal portfolio website showcasing the experiences and establishments of Shazzz.',
         image: '/placeholder.svg?height=300&width=500',
         technologies: ['HTML', 'CSS', 'JavaScript'],
         github: 'https://github.com/yourusername/shazzz',
@@ -156,6 +163,14 @@ const projects = [
         technologies: ['HTML', 'CSS', 'JavaScript', 'Three.js'],
         github: 'https://github.com/yourusername/nisahs',
         live: 'https://nisahs.vercel.app',
+    },
+    {
+        name: 'ToDo App',
+        description: 'A modern todolist application.',
+        image: 'images/screencapture-mmk-todoapp-vercel-app-2024-10-24-06_39_05.png',
+        technologies: ['React', 'CSS'],
+        github: 'https://github.com/muhammedmuneerk/mmk-todoapp',
+        live: 'https://mmk-todoapp.vercel.app',
     },
 ];
 
