@@ -116,19 +116,25 @@ p {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .skill-card {
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .skill-card:hover {
     transform: translateY(-5px);
@@ -136,10 +142,11 @@ p {
 }
 
 .skill-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
     color: var(--accent-color);
 }
+
 .custom-skill-icon {
     width: 50px; /* Size matches the other icons */
     height: 50px;
@@ -161,10 +168,10 @@ p {
 }
 
 
+
 .skill-name {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: bold;
-    margin-bottom: 0.5rem;
 }
 
 .skill-level {
@@ -381,77 +388,7 @@ footer {
     align-items: center; /* Vertically center the content */
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 3rem;
-    }
 
-    h2 {
-        font-size: 2rem;
-    }
-
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap; /* Allow items to wrap on small screens */
-        padding: 0; /* Remove any extra padding */
-    }
-
-    nav ul li {
-        margin: 0.5rem; /* Reduce margin to fit more items */
-        width: auto; /* Ensure the items adjust their width dynamically */
-    }
-
-    /* Ensure nav items wrap and adjust for small screens */
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap; /* Make the list items wrap into multiple rows */
-        padding: 0;
-        margin: 0;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0.75rem; /* Reduce space between list items */
-        flex: 1 0 auto; /* Allow items to resize and fit the screen */
-        text-align: center; /* Center the text */
-        font-size: 8.2pt;
-    }
-
-    /* Center skill grid items and make sure there are two per row */
-    .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
-        justify-content: center; /* Center the items */
-        grid-gap: 1rem; /* Add gap between grid items */
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .modal-content {
-        width: 95%;
-        margin: 10% auto;
-    }
-
-    .modal-body {
-        flex-direction: column;
-    }
-
-    #modal-image {
-        max-width: 100%;
-    }
-
-    .modal-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn {
-        width: 100%;
-        margin-top: 0.5rem;
-    }
-}
 
 
 
@@ -599,4 +536,101 @@ svg.lucide, [class^="lucide-"], [class*=" lucide-"] {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+
+/* For larger screens */
+@media (min-width: 769px) {
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr); /* 5 cards in one line */
+    }
+}
+
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap; /* Allow items to wrap on small screens */
+        padding: 0; /* Remove any extra padding */
+    }
+
+    nav ul li {
+        margin: 0.5rem; /* Reduce margin to fit more items */
+        width: auto; /* Ensure the items adjust their width dynamically */
+    }
+
+    /* Ensure nav items wrap and adjust for small screens */
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* Make the list items wrap into multiple rows */
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0.75rem; /* Reduce space between list items */
+        flex: 1 0 auto; /* Allow items to resize and fit the screen */
+        text-align: center; /* Center the text */
+        font-size: 8.2pt;
+    }
+
+    /* Center skill grid items and make sure there are two per row */
+    .skills-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        /* grid-template-columns: repeat(3, 1fr); /* 3 cards in one line */
+
+        justify-content: center; /* Center the items */
+        grid-gap: 1rem; /* Add gap between grid items */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+
+    .modal-body {
+        flex-direction: column;
+    }
+
+    #modal-image {
+        max-width: 100%;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
+
+
+/* Adjustments for very small screens if needed */
+@media (max-width: 480px) {
+    .skills-grid {
+        /* grid-template-columns: repeat(2, ```html type="html" project="3D Portfolio" file="index.html"
+[v0-no-op-code-block-prefix]1fr); /* 2 cards in one line for very small screens */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards in one line for very small screens */
+    }
 }
