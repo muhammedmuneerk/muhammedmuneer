@@ -600,6 +600,10 @@ svg.lucide, [class^="lucide-"], [class*=" lucide-"] {
         grid-template-columns: 1fr;
     }
 
+    .project-content {
+        opacity: 1;
+    }
+
     .modal-content {
         width: 95%;
         margin: 10% auto;
