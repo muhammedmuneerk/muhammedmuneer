@@ -172,6 +172,14 @@ const projects = [
         github: 'https://github.com/muhammedmuneerk/mmk-todoapp',
         live: 'https://mmk-todoapp.vercel.app',
     },
+    {
+        name: 'AMOR WEDDINGS',
+        description: `A business portfolio for a men's clothing brand. This website includes an advanced gallery`,
+        image: 'images/collage-amorweddings-3.png',
+        technologies: ['HTML', 'CSS', 'Javascript'],
+        github: 'https://github.com/muneer2005/amorweddings',
+        live: 'https://amorweddings.onrender.com',
+    },
 ];
 
 // Populate projects section
